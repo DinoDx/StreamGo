@@ -1,0 +1,33 @@
+@charset "ISO-8859-1";
+
+.list-group-item {
+	background-color: #192231;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+table, td, th {  
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.card {
+	border: 1px solid white;
+	border-radius: 5px;
+}
+
+.btn-success, .glyphicon-ok-sign {
+	background-color: #98878F;
+}

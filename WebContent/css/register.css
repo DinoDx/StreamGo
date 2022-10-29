@@ -1,0 +1,27 @@
+@charset "ISO-8859-1";
+
+form {
+	width: 70%;
+	margin: auto;	
+}
+
+a {
+	color: white;
+}
+
+.btn-success, .glyphicon-ok-sign {
+	background-color: #98878F;
+}
+
+nav ul li a {
+	color: white;
+	text-transform: upper-case;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+a.current, a:hover, .fa-home, .clear:hover {
+	background-color: #1b9bff;
+	transition: .5s;
+	color: white;
+}

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+	<display-name>ProgettoTSW</display-name>
+	<welcome-file-list>
+		<welcome-file>login.jsp</welcome-file>
+	</welcome-file-list>
+
+	<filter>
+		<filter-name>httpHeaderSecurity</filter-name>
+		<filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
+		<init-param>
+			<param-name>xssProtectionEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>antiClickJackingEnabled</param-name>
+			<param-value>true</param-value>
+		</init-param>
+		<init-param>
+			<param-name>antiClickJackingOption</param-name>
+			<param-value>DENY</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>httpHeaderSecurity</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+
+	<filter>
+		<filter-name>AuthenticationFilter</filter-name>
+		<filter-class>control.AuthFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AuthenticationFilter</filter-name>
+		<url-pattern>/authFilter/*</url-pattern>
+	</filter-mapping>
+
+	<filter>
+		<filter-name>AdminFilter</filter-name>
+		<filter-class>control.AdminFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AdminFilter</filter-name>
+		<url-pattern>/authFilter/adminFilter/*</url-pattern>
+	</filter-mapping>
+
+	<listener>
+		<listener-class>control.DatabaseConnectionListener</listener-class>
+	</listener>
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:mysql://localhost:3306/</param-value>
+	</context-param>
+	<context-param>
+		<param-name>database</param-name>
+		<param-value>esameTsw?serverTimezone=UTC</param-value>
+	</context-param>
+	<context-param>
+		<param-name>user_name</param-name>
+		<param-value>esameTsw</param-value>
+	</context-param>
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>esameTsw</param-value>
+	</context-param>
+
+</web-app>

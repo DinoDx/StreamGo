@@ -1,0 +1,21 @@
+@charset "ISO-8859-1";
+
+body {
+	overflow-x: hidden; 
+	left: 0;
+}
+
+a {
+	color: white;
+}
+
+.list-group-item {
+	background-color: #192231;
+	color: white;
+}
+
+.card {
+	border: 1px solid white;
+	border-radius: 5px;
+	margin: auto;
+}

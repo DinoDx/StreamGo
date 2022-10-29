@@ -1,0 +1,94 @@
+@charset "ISO-8859-1";
+
+/*COLORI:
+	#494E6B		Stormy
+	#98878F		Cloud
+	#985E6D		Sunset
+	#192231		Evening
+*/
+* {
+	font-family: verdana, sans-serif;
+	background-color: #192231;
+	color: white;
+}
+
+body {
+	background-color: #192231;
+	color: white;
+}
+
+.logo {
+	display: block;
+	margin: auto;
+}
+
+.error {
+	background-color: red;
+}
+
+.btn-success, .glyphicon-ok-sign {
+	background-color: #98878F;
+}
+
+
+li {
+	list-style: none;
+}
+
+#errorsList {
+	text-align: center;
+	color: red;
+}
+
+a:hover {
+	color:white;
+}
+
+.navHomepage, .navLogout {
+	color: white;
+	text-transform: upper-case;
+	border-radius: 5px;
+	font-size: 20px;
+}
+
+.navHomepage:hover, .glyphicon-home:hover {
+	background-color: #1b9bff;
+}
+
+.navHomepage:hover .glyphicon-home {
+	background-color: #1b9bff;
+}
+
+.navLogout:hover, .glyphicon-ban-circle:hover {
+	background-color: red;
+}
+
+.navLogout:hover .glyphicon-ban-circle {
+	background-color: red;
+}
+
+#navigationBar, navigationMenu {
+	list-style: none;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+nav#navigationBar ul li {
+	display: inline-block;
+}
+
+.rotate:hover{
+	    -webkit-animation: spin 1s linear infinite;
+	    -moz-animation: spin 1s linear infinite;
+	    animation: spin 1s linear infinite;
+	}
+	
+@-webkit-keyframes spin{
+	    100%{-webkit-transform: rotate(360deg);}
+	}
+	@-moz-keyframes spin{
+	    100%{-webkit-transform: rotate(360deg);}
+	}
+	@keyframes spin{
+	    100%{-webkit-transform: rotate(360deg);}
+	}

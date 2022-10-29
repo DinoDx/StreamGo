@@ -1,0 +1,115 @@
+@charset "ISO-8859-1";
+
+* {
+	font-family: verdana, sans-serif;
+	color: black;
+	margin: 0;
+}
+
+body, html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background-image: url("../img/background.jpg");
+	height: 100%;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+img {
+	float: left;
+	margin: 10px;
+}
+
+form {
+	background-color: #494e6b;
+	width: 400px;
+	height: 60%;
+	padding: 30px;
+	margin: auto;
+	margin-top: 150px;
+}
+
+#errorsList {
+	text-align: center;
+	color: red;
+	font-weight: bold;
+}
+
+#grad {
+  height: auto;
+  background-color: rgba(73, 78, 107);
+  background-image: linear-gradient(rgba(152, 135, 143, 0.8), rgba(73, 78, 107, 1));
+  opacity: 1;
+}
+
+label {
+	text-align: left;
+	font-weight: 900;
+	font-size: 130%;
+	color: white;
+}
+
+a {
+	color: white;
+	text-decoration: underline;
+}
+
+a:hover {
+	font-weight: bold;
+	color: white
+}
+
+.btn-success, .glyphicon-ok-sign {
+	background-color: #98878F;
+}
+
+btn:hover {
+	background-color: #98878F;
+}
+
+span {
+	display: inline;
+	color: white;
+	font-size: 17px;
+}
+
+.rotate:hover{
+	    -webkit-animation: spin 2s linear infinite;
+	    -moz-animation: spin 2s linear infinite;
+	    animation: spin 2s linear infinite;
+	}
+	
+@-webkit-keyframes spin{
+	    100%{-webkit-transform: rotate(360deg);}
+	}
+	@-moz-keyframes spin{
+	    100%{-webkit-transform: rotate(360deg);}
+	}
+	@keyframes spin{
+	    100%{-webkit-transform: rotate(360deg);}
+	}
+
+@media screen and (max-width: 1000px) {
+	form {
+		width: 350px;
+	}
+	img {
+		width: 250px;
+		height: 165px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	form {
+		width: 300px;
+	}
+	img {
+		width: 200px;
+		height: 130px;
+	}
+}
